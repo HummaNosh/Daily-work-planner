@@ -19,14 +19,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./develop/style.css" />
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p  class="fave">Schedule all your daily appointments and tasks in your favorite planner</p>
+      <br>
+      <p class ="fave"> A perfect hourly planner fit for your daily routine</p>
+      <p id = "currentDay" class="lead"> 
+      </p>
+      
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
@@ -35,19 +45,109 @@
         <div class="time-block">
             <div class="row ">
               <div class="col bg-primary text-black">
-                this will have the time
+                9 am
               </div>
               <div class="col">
-                this will need to be a label
+                <!-- <div contenteditable="true" id = "tasks"></div> -->
+                <input id="myText" type="text" style="border:none; background: transparent; outline: 0;"/>
               </div>
-              <div class="col bg-danger text-black">
-                edit button
+              <div class="col  bg-danger text-black">
+                <button  id ="save"> Save </button>
+                <button  id = "edit"> Edit </button>
               </div>
+              
+            </div>
+            <div class="row ">
+            <div class="col bg-primary text-black">
+              10 am
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
             </div>
           </div>
+          <div class="row ">
+            <div class="col bg-primary text-black">
+              11 am
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col bg-primary text-black">
+              12 pm
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col bg-primary text-black">
+              1 pm
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col bg-primary text-black">
+              2 pm
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col bg-primary text-black">
+              3 pm
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col bg-primary text-black">
+              4 pm
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col bg-primary text-black">
+              5 pm
+            </div>
+            <div class="col">
+              this will need to be a label
+            </div>
+            <div class="col bg-danger text-black">
+              edit button
+            </div>
+          </div>
+          </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./develop/script.js"></script>
+   
   </body>
 </html>

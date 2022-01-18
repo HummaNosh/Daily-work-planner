@@ -25,6 +25,10 @@ textarea {
   white-space: pre-wrap;
 }
 
+.fave {
+  font-style: italic;
+  font-size: 13px;
+}
 .time-block {
   text-align: center;
   border-radius: 15px;
