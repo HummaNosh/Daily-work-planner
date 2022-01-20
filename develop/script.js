@@ -31,6 +31,7 @@ $(document).ready(function () {
   });
 
   // Below are timing lines, without these each value wont save
+
   $("#9am .description").val(localStorage.getItem("9am"));
   $("#10am .description").val(localStorage.getItem("10am"));
   $("#11am .description").val(localStorage.getItem("11am"));
@@ -55,8 +56,3 @@ $(document).ready(function () {
 var hourago = moment().hour();
 
 console.log(hourago);
-function past() {
-  if(hourago <= -1) {
-    document.getElementById("myText") = "good day"
-  }
-}
