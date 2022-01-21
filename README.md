@@ -25,4 +25,6 @@ THEN the saved events persist
 
 A rough screenshot of the app is below:
 
+![image](https://user-images.githubusercontent.com/93604239/150449646-cccfa781-883c-4561-a296-ae5f18d086b0.png)
+
 Deployed link: https://hummanosh.github.io/Daily-work-planner/
