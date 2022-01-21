@@ -3,7 +3,7 @@
 var myTEXT = $("#myText");
 var saveBtn = $(".saveBtn");
 var DescriptionBox = $("input");
-var CurrentHR = moment().format("H");
+var CurrentHR = moment().format("h");
 
 // Todays Date
 
@@ -53,19 +53,19 @@ DescriptionBox.each(function (Color) {
   // Any number after counting 9 (because theres 9 other hours) from current hour, is less than current hour, is PAST...
   if (CurrentHR > Color + 9) {
     // Find the 'past' class and colour GREY - CSS
-    $(this).toggleClass("past");
+    $(this).addClass("past");
   }
 
   // If the current hour is equals to hours counting it is PRESENT...
   if (CurrentHR == Color + 9) {
     // Find the 'present' class and colour RED - CSS
-    $(this).toggleClass("present");
+    $(this).addClass("present");
   }
 
   // Any number/hour after counting 9 from current hour, is larger than current hour is FUTURE...
   if (CurrentHR < Color + 9) {
     // Find the 'future' class and colour GREEN - CSS
-    $(this).toggleClass("future");
+    $(this).addClass("future");
   }
 });
 console.log(CurrentHR);
