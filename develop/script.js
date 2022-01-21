@@ -1,10 +1,9 @@
-console.log("hello");
-
 // VARIABLES
 
-var myTEXT = document.querySelector("#myText");
+var myTEXT = $("#myText");
 var saveBtn = $(".saveBtn");
-var deleteBtn = document.querySelector(".deleteBtn");
+var DescriptionBox = $("input");
+var CurrentHR = moment().format("H");
 
 // Todays Date
 
@@ -16,15 +15,16 @@ $("#currentDay").text(date);
 $(document).ready(function () {
   // Save buttons job
   $(".saveBtn").on("click", function () {
-    // Catch the value of 3rd 'dom' down, which is the user input value called description
+    // Catch the value of 3rd 'dom' down, which is the user input value/class called description
     var myText = $(this).siblings(".description").val();
 
-    // Catch the id of the 1st 'dom', which is the times, explained in the lines below
+    // Catch the id of the 1st 'dom', which is the times, explained in the lines below(34-43)
     var timings = $(this).parent().attr("id");
 
-    // Below saves users input on the planner even after refreshing
+    // Below saves users input on the planner even after refreshing in local storage..
     localStorage.setItem(timings, myText);
-    // Log the activity
+
+    // Logging the activity
     console.log("button is clicked");
     console.log(myText);
     console.log(timings);
@@ -46,13 +46,26 @@ $(document).ready(function () {
 
 // -----------------------------------------------------------------------------------------------------------
 
-// $(".deleteBtn").on("click", deleteitem());
+// COLOR CODE BASED ON TENSE
 
-// console.log("deletings");
+// Each 'input' box will get colour coded based on the below function
+DescriptionBox.each(function (Color) {
+  // Any number after counting 9 (because theres 9 other hours) from current hour, is less than current hour, is PAST...
+  if (CurrentHR > Color + 9) {
+    // Find the 'past' class and colour GREY - CSS
+    $(this).toggleClass("past");
+  }
 
-// function deleteitem() {
-//   localStorage.removeItem(timings, myText);
-// }
-var hourago = moment().hour();
+  // If the current hour is equals to hours counting it is PRESENT...
+  if (CurrentHR == Color + 9) {
+    // Find the 'present' class and colour RED - CSS
+    $(this).toggleClass("present");
+  }
 
-console.log(hourago);
+  // Any number/hour after counting 9 from current hour, is larger than current hour is FUTURE...
+  if (CurrentHR < Color + 9) {
+    // Find the 'future' class and colour GREEN - CSS
+    $(this).toggleClass("future");
+  }
+});
+console.log(CurrentHR);
