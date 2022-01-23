@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 // Each 'input' box will get colour coded based on the below function
 DescriptionBox.each(function (Color) {
-  // Any number after counting 9 (because theres 9 other hours) from current hour, is less than current hour, is PAST...
+  // "color" is 0, if "0" and counting + 9 is less than current hour, then create class PAST...
   if (CurrentHR > Color + 9) {
     // Find the 'past' class and colour GREY - CSS
     $(this).addClass("past");
@@ -62,7 +62,7 @@ DescriptionBox.each(function (Color) {
     $(this).addClass("present");
   }
 
-  // Any number/hour after counting 9 from current hour, is larger than current hour is FUTURE...
+  // If counting number + 9 is larger than current hour, then create class FUTURE...
   if (CurrentHR < Color + 9) {
     // Find the 'future' class and colour GREEN - CSS
     $(this).addClass("future");
